@@ -7,11 +7,13 @@ import PointsInput from '../Atoms/PointsInput';
 class Player extends Component {
     render() {
         return (
-            <div>
-                <UserIcon />
-                <UserName />
-                <TotalPoints />
-                <PointsInput />
+            <div style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
+                <div style={{textAlign: "center"}}>
+                    <UserIcon />
+                    <UserName />
+                </div>
+                <PointsInput /> <input type="text" name="Input Points"/>
+                <TotalPoints /><b>2000</b>
             </div>
         );
     }
