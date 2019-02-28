@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Player from './Molecules/Player';
 import AddPlayerButton from './Atoms/AddPlayerButton';
 
 class App extends Component {
@@ -10,7 +9,6 @@ class App extends Component {
         <AddPlayerButton />
         <p>RESET</p>
         <p>BOTTOM NAVIGATION</p>
-        <Player />
       </div>
     );
   }
