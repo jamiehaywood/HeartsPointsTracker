@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import AddPlayerButton from './Atoms/AddPlayerButton';
+import Player from './Molecules/Player';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <p>PLAYERS</p>
+        <Player />
         <AddPlayerButton />
         <p>RESET</p>
         <p>BOTTOM NAVIGATION</p>

@@ -6,13 +6,14 @@ class AddPlayerButton extends Component {
         var playerName = prompt("Please enter your name:", "Full Stack")
 
         if (playerName === null || playerName === "") {
-            playerName = prompt("Please enter your name:", "You Bin")
+            playerName = prompt("Please enter your name:", "You Bin");
         }
         else {
             var obj = {};
             obj["name"] = {playerName};
             obj["points"] = [0,];
-            console.log("Player Object has been created")
+            console.log(obj);
+            console.log("Player Object has been created");
         }
     }
     render() {
