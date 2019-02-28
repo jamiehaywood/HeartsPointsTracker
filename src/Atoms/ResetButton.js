@@ -4,7 +4,7 @@ class ResetButton extends Component {
     render() {
         return (
             <div>
-                RESET
+                {/* Reset clears all points arrays, and all users */}
             </div>
         );
     }
