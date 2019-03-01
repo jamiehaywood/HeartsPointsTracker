@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import soundboardicon from './Images/soundboardicon.png'
 
 class SoundBoardIcon extends Component {
     render() {
         return (
             <div>
-                {/* sound icon with an onclick to a different page */}
+               <img src={soundboardicon} alt="soundboardicon" height="40px"/>
             </div>
         );
     }
