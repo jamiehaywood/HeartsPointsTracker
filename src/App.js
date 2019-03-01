@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AddPlayerButton from './Atoms/AddPlayerButton';
 import Player from './Molecules/Player';
+import ResetButton from './Atoms/ResetButton';
 
 class App extends Component {
   render() {
@@ -8,7 +9,7 @@ class App extends Component {
       <div>
         <Player />
         <AddPlayerButton />
-        <p>RESET</p>
+        <ResetButton />
         <p>BOTTOM NAVIGATION</p>
       </div>
     );
