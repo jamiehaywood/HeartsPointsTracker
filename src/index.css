@@ -13,6 +13,12 @@ code {
     monospace;
 }
 
+input{
+  width: 40%;
+  border: none;
+  text-align: center;
+  border-bottom:2px solid #b0b0b0
+}
 input[type='number'],
 textarea {
   font-size: 16px;
