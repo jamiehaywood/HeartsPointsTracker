@@ -11,6 +11,8 @@ class Player extends Component {
                     {this.props.name}
                 </div>
                 <div><input type="number" name="Input Points"/></div>
+                <div style={{width:"65px", fontSize:"30px"}}><b>{this.props.points}</b></div>
+            </div>
             </div>
         );
     }
