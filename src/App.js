@@ -11,6 +11,7 @@ class App extends Component {
       playersData : []
   }
     this.addPlayerButton = this.addPlayerButton.bind(this)
+    this.resetButton = this.resetButton.bind(this)
   }
 
   addPlayerButton (){
@@ -34,6 +35,17 @@ class App extends Component {
             playersData: playersData
         }
       }
+
+  resetButton(){
+    this.setState(this.state)
+        var playersData = this.state.playersData
+        playersData.length = 0;
+        console.log(playersData)
+        return {
+            playersData: playersData
+        }
+  }
+  
   render() {
     return (
       <div>
