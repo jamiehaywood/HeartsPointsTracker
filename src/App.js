@@ -47,7 +47,7 @@ class App extends Component {
   
   
   render() {
-    const player = this.state.playersData.map(x => <Player player={x} name={x.name} points={x.points} key={x.name}/>)
+    const player = this.state.playersData.map(x => <Player player={x} name={x.name} points={x.points.reduce((a, b) => a + b, 0)} key={x.name}/>)
     return (
       <div>
         {player}
