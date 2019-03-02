@@ -16,16 +16,16 @@ class App extends Component {
   addPlayerButton (){
     var playerName = prompt("Please enter your name:", "")
 
-        if (playerName === null || playerName === "") {
-            playerName = prompt("Please enter your name:", "");
+        while(playerName === null || playerName === "") {
+          alert("please enter a name")
+          playerName = prompt("Please enter your name:", "")
         }
-        else {
             var obj = {};
             obj["name"] = playerName;
             obj["points"] = [0,];
             console.log("Player Object has been created");
             console.log(obj)
-        }
+
         this.setState(this.state)
         var playersData = this.state.playersData
         playersData.push(obj)
