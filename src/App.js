@@ -25,7 +25,6 @@ class App extends Component {
             obj["name"] = playerName;
             obj["points"] = [0,];
             console.log("Player Object has been created");
-            console.log(obj)
 
         this.setState(this.state)
         var playersData = this.state.playersData
@@ -45,7 +44,7 @@ class App extends Component {
             playersData: playersData
         }
   }
-  
+
   render() {
     return (
       <div>
