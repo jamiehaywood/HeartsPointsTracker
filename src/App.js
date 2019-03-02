@@ -44,11 +44,13 @@ class App extends Component {
             playersData: playersData
         }
   }
-
+  
+  
   render() {
+    const player = this.state.playersData.map(x => <Player player={x} name={x.name} points={x.points} key={x.name}/>)
     return (
       <div>
-        <Player />
+        {player}
         <AddPlayerButton addPlayerButton={this.addPlayerButton} />
         <ResetButton resetButton={this.resetButton}/>
         <BottomNav />
