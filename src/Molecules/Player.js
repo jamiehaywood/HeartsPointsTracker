@@ -10,8 +10,7 @@ class Player extends Component {
                     <UserIcon />
                     {this.props.name}
                 </div>
-                <div><input type="tel" name="Input Points"/></div>
-                <div><b>{this.props.points}</b></div>
+                <div><input type="number" name="Input Points"/></div>
             </div>
         );
     }
