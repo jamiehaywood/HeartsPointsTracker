@@ -40,7 +40,7 @@ class App extends Component {
     this.setState(this.state)
         var playersData = this.state.playersData
         playersData.length = 0;
-        console.log(playersData)
+        console.log("all playersData deleted")
         return {
             playersData: playersData
         }
