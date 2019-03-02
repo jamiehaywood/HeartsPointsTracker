@@ -4,7 +4,8 @@ import UserIcon from '../Atoms/UserIcon';
 class Player extends Component {
     render() {
         return (
-            <div style={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
+            <div style={{textAlign:"center", borderBottom:"1px solid #d0d0d0"}}>
+            <div style={{display:"flex", alignItems:"center", justifyContent:"space-evenly", padding: "5px 0px"}}>
                 <div style={{textAlign: "center"}}>
                     <UserIcon />
                     {this.props.name}
