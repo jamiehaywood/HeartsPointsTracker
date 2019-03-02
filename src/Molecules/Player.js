@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import UserIcon from '../Atoms/UserIcon';
-import TotalPoints from '../Atoms/TotalPoints';
-import PointsInput from '../Atoms/PointsInput';
 
 class Player extends Component {
     render() {
@@ -11,8 +9,8 @@ class Player extends Component {
                     <UserIcon />
                     {this.props.name}
                 </div>
-                <PointsInput /> <input type="tel" name="Input Points"/>
-                <TotalPoints /><b>2000</b>
+                <div><input type="tel" name="Input Points"/></div>
+                <div><b>{this.props.points}</b></div>
             </div>
         );
     }
