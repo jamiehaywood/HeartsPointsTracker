@@ -4,7 +4,7 @@ import plus from "./Images/plus.png"
 class AddPlayerButton extends Component {
     render() {
         return (
-            <div onClick={this.props.addPlayerButton}>
+            <div onClick={this.props.addPlayerButton} style={{textAlign:"center"}}>
                 <img src={plus} height="60em" alt='plusIcon' style={{cursor:"pointer"}} />
 
                 {/* 1. Plus Icon with onClick event triggering a "name" input popup ✅
