@@ -9,7 +9,7 @@ class App extends Component {
     super()
     this.state = {
       playersData: []
-  }
+    }
     this.addPlayerButton = this.addPlayerButton.bind(this)
     this.resetButton = this.resetButton.bind(this)
     this.addToPoints = this.addToPoints.bind(this)
@@ -19,33 +19,33 @@ class App extends Component {
     var playerName = prompt("Please enter your name:", "")
 
     while (playerName === null || playerName === "") {
-          alert("please enter a name")
-          playerName = prompt("Please enter your name:", "")
-        }
-            var obj = {};
-            obj["name"] = playerName;
-            obj["points"] = [0,];
-            console.log("Player Object has been created");
+      alert("please enter a name")
+      playerName = prompt("Please enter your name:", "")
+    }
+    var obj = {};
+    obj["name"] = playerName;
+    obj["points"] = [0,];
+    console.log("Player Object has been created");
 
-        this.setState(this.state)
-        var playersData = this.state.playersData
-        playersData.push(obj)
-        console.log(playersData)
-        return {
-            playersData: playersData
-        }
-      }
+    this.setState(this.state)
+    var playersData = this.state.playersData
+    playersData.push(obj)
+    console.log(playersData)
+    return {
+      playersData: playersData
+    }
+  }
 
   resetButton() {
     this.setState(this.state)
-        var playersData = this.state.playersData
-        playersData.length = 0;
-        console.log("all playersData deleted")
-        return {
-            playersData: playersData
-        }
+    var playersData = this.state.playersData
+    playersData.length = 0;
+    console.log("all playersData deleted")
+    return {
+      playersData: playersData
+    }
   }
-  
+
   addToPoints(name, points) {
     this.setState(this.state)
     var playersData = this.state.playersData
@@ -56,7 +56,6 @@ class App extends Component {
       playersData: playersData
     }
   }
-  
 
   render() {
     function add(accumulator, a) {
