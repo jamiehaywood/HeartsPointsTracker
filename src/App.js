@@ -12,6 +12,7 @@ class App extends Component {
   }
     this.addPlayerButton = this.addPlayerButton.bind(this)
     this.resetButton = this.resetButton.bind(this)
+    this.addToPoints = this.addToPoints.bind(this)
   }
 
   addPlayerButton() {
