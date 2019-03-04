@@ -5,19 +5,19 @@ import ResetButton from './Atoms/ResetButton';
 import BottomNav from './Molecules/BottomNav';
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super()
     this.state = {
-      playersData : []
+      playersData: []
   }
     this.addPlayerButton = this.addPlayerButton.bind(this)
     this.resetButton = this.resetButton.bind(this)
   }
 
-  addPlayerButton (){
+  addPlayerButton() {
     var playerName = prompt("Please enter your name:", "")
 
-        while(playerName === null || playerName === "") {
+    while (playerName === null || playerName === "") {
           alert("please enter a name")
           playerName = prompt("Please enter your name:", "")
         }
@@ -35,7 +35,7 @@ class App extends Component {
         }
       }
 
-  resetButton(){
+  resetButton() {
     this.setState(this.state)
         var playersData = this.state.playersData
         playersData.length = 0;
@@ -52,7 +52,7 @@ class App extends Component {
       <div>
         {player}
         <AddPlayerButton addPlayerButton={this.addPlayerButton} />
-        <ResetButton resetButton={this.resetButton}/>
+        <ResetButton resetButton={this.resetButton} />
         <BottomNav />
       </div>
     );
