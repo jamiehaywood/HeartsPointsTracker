@@ -45,7 +45,18 @@ class App extends Component {
         }
   }
   
+  addToPoints(name, points) {
+    this.setState(this.state)
+    var playersData = this.state.playersData
+    var objIndex = playersData.findIndex((obj => obj.name === name));
+    playersData[objIndex].points.push(points)
+    console.log(playersData);
+    return {
+      playersData: playersData
+    }
+  }
   
+
   render() {
     const player = this.state.playersData.map(x => <Player player={x} name={x.name} points={x.points.reduce((a, b) => a + b, 0)} key={x.name}/>)
     return (
