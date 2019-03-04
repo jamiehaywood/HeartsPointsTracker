@@ -58,7 +58,12 @@ class App extends Component {
   
 
   render() {
-    const player = this.state.playersData.map(x => <Player player={x} name={x.name} points={x.points.reduce((a, b) => a + b, 0)} key={x.name}/>)
+    function add(accumulator, a) {
+      var pointsInteger = parseInt(accumulator, 10);
+      var tempInt = parseInt(a, 10);
+      return pointsInteger + tempInt;
+  }
+    const player = this.state.playersData.map(x => <Player player={x} name={x.name} points={x.points.reduce(add)} addToPoints={this.addToPoints} key={x.name} />)
     return (
       <div>
         {player}
