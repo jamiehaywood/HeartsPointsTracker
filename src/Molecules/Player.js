@@ -16,7 +16,7 @@ class Player extends Component {
             <div style={{display:"flex", alignItems:"center", justifyContent:"space-evenly", padding: "5px 0px"}}>
                 <div style={{textAlign: "center"}}>
                     <UserIcon />
-                    {this.props.name}
+                    <b>{this.props.name}</b>
                 </div>
                 <input type="number" id={this.props.name} onKeyPress={this.enterKeyPress}/>
                 <div style={{width:"65px", fontSize:"30px"}}><b>{this.props.points}</b></div>
