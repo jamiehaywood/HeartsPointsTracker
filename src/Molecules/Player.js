@@ -13,7 +13,7 @@ class Player extends Component {
     render() {
         return (
             <div style={{textAlign:"center", borderBottom:"1px solid #d0d0d0"}}>
-            <div style={{display:"flex", alignItems:"center", justifyContent:"space-evenly", padding: "5px 0px"}}>
+            <div style={{display:"flex", alignItems:"center", justifyContent:"space-evenly", padding: "15px 0px"}}>
                 <div style={{textAlign: "center"}}>
                     <UserIcon />
                     <b>{this.props.name}</b>
