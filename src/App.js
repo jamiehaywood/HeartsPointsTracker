@@ -78,7 +78,7 @@ class App extends Component {
         {player}
         <AddPlayerButton addPlayerButton={this.addPlayerButton} />
         <ResetButton resetButton={this.resetButton} />
-        <BottomNav />
+        <BottomNav gamesNumber={gamesNumber} />
       </div>
     );
   }
