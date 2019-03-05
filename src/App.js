@@ -74,11 +74,17 @@ class App extends Component {
     const player = this.state.playersData.map(x => <Player player={x} name={x.name} points={x.points.reduce(add)} addToPoints={this.addToPoints} key={x.name} />)
 
     return (
-      <div>
-        {player}
-        <AddPlayerButton addPlayerButton={this.addPlayerButton} />
-        <ResetButton resetButton={this.resetButton} />
-        <BottomNav gamesNumber={gamesNumber} />
+      <div style={{ position: "relative", minHeight: "100vh" }}>
+        <div style={{ paddingBottom: "54px" }}>
+          {player}
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", }}>
+            <AddPlayerButton addPlayerButton={this.addPlayerButton} />
+            <ResetButton resetButton={this.resetButton}/>
+          </div>
+        </div>
+        <footer style={{ width: "100%", height: "54px", paddingTop: "55px", position: "fixed", bottom: "0", left: "0" }}>
+          <BottomNav gamesNumber={gamesNumber} />
+        </footer>
       </div>
     );
   }
