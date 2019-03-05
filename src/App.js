@@ -72,6 +72,7 @@ class App extends Component {
     }
 
     const player = this.state.playersData.map(x => <Player player={x} name={x.name} points={x.points.reduce(add)} addToPoints={this.addToPoints} key={x.name} />)
+
     return (
       <div>
         {player}
