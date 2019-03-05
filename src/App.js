@@ -51,7 +51,6 @@ class App extends Component {
     var playersData = this.state.playersData
     var objIndex = playersData.findIndex((obj => obj.name === name));
     playersData[objIndex].points.push(points)
-    console.log(playersData);
     return {
       playersData: playersData
     }
