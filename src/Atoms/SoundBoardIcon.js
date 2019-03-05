@@ -4,8 +4,8 @@ import soundboardicon from './Images/soundboardicon.png'
 class SoundBoardIcon extends Component {
     render() {
         return (
-            <div>
-               <img src={soundboardicon} alt="soundboardicon" height="40px"/>
+            <div style={{padding:"10px"}}>
+               <img src={soundboardicon} alt="soundboardicon" height="30px"/>
             </div>
         );
     }
