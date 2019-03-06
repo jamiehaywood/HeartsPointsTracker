@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Soundboard from '../Atoms/SoundBoardIcon';
 import SoundBoardIcon from '../Atoms/SoundBoardIcon';
 
 class BottomNav extends Component {
