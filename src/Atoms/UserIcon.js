@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import userIconPlaceholder from './Images/userIconPlaceholder.jpg';
+import React, { Component } from 'react'
+import userIconPlaceholder from './Images/userIconPlaceholder.jpg'
 class UserIcon extends Component {
-    render() {
-        return (
-            <div>
-                <img src={userIconPlaceholder} alt="userIcon" height="65px"></img>
-                {/* Rendering an image of some sort.
+  render () {
+    return (
+      <div>
+        <img src={userIconPlaceholder} alt='userIcon' height='65px' />
+        {/* Rendering an image of some sort.
                     1. Render a static image for now
                     2. Render an image uploaded by the user
                 */}
-            </div>
-        );
-    }
+      </div>
+    )
+  }
 }
 
-export default UserIcon;
+export default UserIcon
