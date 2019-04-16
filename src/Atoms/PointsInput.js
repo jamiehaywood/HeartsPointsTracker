@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class PointsInput extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        );
-    }
+  render () {
+    return (
+      <div />
+    )
+  }
 }
 
-export default PointsInput;
+export default PointsInput

@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import soundboardicon from './Images/soundboardicon.png'
 
 class SoundBoardIcon extends Component {
-    render() {
-        return (
-            <div>
-               <img src={soundboardicon} alt="soundboardicon" height="40px"/>
-            </div>
-        );
-    }
+  render () {
+    return (
+      <div style={{ padding: '10px 20px' }}>
+        <img src={soundboardicon} alt='soundboardicon' height='30px' />
+      </div>
+    )
+  }
 }
 
-export default SoundBoardIcon;
+export default SoundBoardIcon
