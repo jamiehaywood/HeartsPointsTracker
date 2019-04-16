@@ -21,7 +21,7 @@ It's optimized for 5 players on an iPhone 6/7/8.
 #### Resetting the users
 Press the reset button below the&nbsp; <img vertical-align="middle" src="https://github.com/jamiehaywood/HeartsPointsTracker/blob/master/src/Atoms/Images/plus.png?raw=true" height="20px"> &nbsp;button.
 
-### Adding the Progressive Web App to your iOS home screen
+## Adding the Progressive Web App to your iOS home screen
 
 1. Navigate to `www.jamiehaywood.github.io/HeartsPointsTracker`
 
