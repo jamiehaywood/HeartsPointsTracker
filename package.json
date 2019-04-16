@@ -1,7 +1,6 @@
 {
   "name": "heartsapp",
   "version": "0.1.0",
-  "homepage":"https://jamiehaywood.github.io/HeartsPointsTracker/",
   "private": true,
   "homepage": "http://jamiehaywood.github.io/HeartsPointsTracker",
   "dependencies": {
