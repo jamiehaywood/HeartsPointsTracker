@@ -1,44 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# <img align="center" width=100% src="https://github.com/jamiehaywood/HeartsPointsTracker/blob/master/src/Atoms/Images/readmetitle.png?raw=true">
 
-## Available Scripts
+This application has been built for tracking player points in the card game [Hearts](https://en.wikipedia.org/wiki/Hearts_(card_game)). 
 
-In the project directory, you can run:
+Although traditionally played with 4 people, this application can be used to track as many or as few players as you wish. 
 
-### `yarn start`
+It's optimized for 5 players on an iPhone 6/7/8.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
+#### Adding a user
+1. To add a user, press &nbsp; <img vertical-align="middle" src="https://github.com/jamiehaywood/HeartsPointsTracker/blob/master/src/Atoms/Images/plus.png?raw=true" height="20px"> &nbsp;
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+2. Enter a player's name and press ok.
 
-### `yarn test`
+3. Repeat for the desired number of players.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. On mobile devices, to add points, tap the input box in the middle of the player, type the number, and press `Enter` or `Return`
 
-### `yarn build`
+5. Make sure the number is correct, as you will not be able to undo! This feature is in the pipeline.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Resetting the users
+Press the reset button below the&nbsp; <img vertical-align="middle" src="https://github.com/jamiehaywood/HeartsPointsTracker/blob/master/src/Atoms/Images/plus.png?raw=true" height="20px"> &nbsp;button.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Adding the Progressive Web App to your iOS home screen
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Navigate to `www.jamiehaywood.github.io/HeartsPointsTracker`
 
-### `yarn eject`
+2. Hit the share &nbsp; <img vertical-align="middle" src="https://developer.apple.com/design/human-interface-guidelines/ios/images/icons/navigation_bar_toobar_icons/Navigation_Action.png" height="17px">&nbsp; &nbsp;icon
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Press  `Add to Home Screen` 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Press `Add` in the top right hand corner
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Voila, you have the Hearts Points Tracker added to your homescreen.
