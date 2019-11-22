@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import './css/App.css';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Players } from './Players';
+import { Add } from './Add';
+import { NavBar } from './NavBar';
+
+
+export interface PlayersContextInterface {
+  name: string
+  points: number
+  gamesPlayed: number
+  image: File | undefined
 }
+
+
+
+export const App = () => {
+  useEffect(() => { console.log(players) })
+  const [players, addPlayers] = useState([])
+  return (
+    <div>
+      <Players list={players} />
+      <Add currentPlayers={players} addPlayer={addPlayers} />
+      <NavBar />
+    </div>
+  )
+};
 
 export default App;
