@@ -1,0 +1,10 @@
+.appBody{
+    position:relative;
+    min-height:'100vh';
+    text-align:center
+}
+
+html,
+body {
+position: fixed;
+}

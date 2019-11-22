@@ -1,0 +1,62 @@
+.name{
+    text-align: "center";
+    font-size: 5vw;
+    font-weight: bold;
+    align-self: center;
+    margin-left: 8vw;
+}
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+-webkit-appearance: none;
+border-radius: 0;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+input{
+    width: 18vw;
+    -webkit-appearance: none;
+    border-width: none;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: none;
+    font-size: 8vw;
+    font-weight: bolder;
+    text-align: center;
+    align-self: center;
+    border-radius: 0;
+}
+textarea, input { outline: none; }
+
+.uploaded{
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.image, .uploaded{
+    width: 13vw; 
+    height: 13vw;
+    align-self: center;
+    margin-left: 1vw;
+    border-radius: 50%;
+}
+
+.playercontainer {
+    border-bottom: 1px solid #d0d0d0;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
