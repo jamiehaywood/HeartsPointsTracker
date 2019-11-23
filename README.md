@@ -1,6 +1,6 @@
 # <img align="center" width=100% src="./readmetitle.png?raw=true">
 
-![](https://github.com/jamiehaywood/HeartsPointsTracker/workflows/build/badge.svg) ![](https://github.com/jamiehaywood/HeartsPointsTracker/workflows/release/badge.svg)
+![](https://github.com/jamiehaywood/HeartsPointsTracker/workflows/Build%20and%20Deployment/badge.svg)
 
 This application has been built for tracking player points in the card game [Hearts](https://en.wikipedia.org/wiki/Hearts_(card_game)). 
 
