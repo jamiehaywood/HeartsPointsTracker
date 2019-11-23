@@ -1,29 +1,19 @@
-name: build & deploy
-
-on: [push]
-
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches:
+      - master
 jobs:
-  build:
-
+  build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      GHPagesToken: ${{ secrets.GH_Pages }}
-      
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js 10
-      uses: actions/setup-node@v1
-      with:
-        node-version: 10
+    - name: Checkout
+      uses: actions/checkout@master
 
-    - name: npm install & build
-      run: |
-        npm install
-        npm run build
-
-    - name: Deploy to GH Pages
-      run: |
-        git config --global user.email "jamie.haywood@gmail.com"
-        git config --global user.name "jamiehaywood"
-        git remote set-url origin https://${GHPagesToken}@github.com/jamiehaywood/HeartsPointsTracker.git
-        npm run deploy
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
+        BUILD_SCRIPT: npm install && npm run build
