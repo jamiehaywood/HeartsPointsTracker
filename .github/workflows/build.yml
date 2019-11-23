@@ -6,10 +6,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
-    steps:
     env:
       GHPagesToken: ${{ secrets.GH_Pages }}
+      
+    steps:
     - uses: actions/checkout@v1
     - name: Use Node.js 10
       uses: actions/setup-node@v1
