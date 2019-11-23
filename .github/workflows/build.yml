@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    env:
+      GHPagesToken: ${{ secrets.GH_Pages }}
     - uses: actions/checkout@v1
     - name: Use Node.js 10
       uses: actions/setup-node@v1
@@ -19,5 +21,9 @@ jobs:
         npm install
         npm run build
 
-    - name: Deploy to GH pages
-      run: npm run deploy
+    - name: Deploy to GH Pages
+      run: |
+        git config --global user.email "jamie.haywood@gmail.com"
+        git config --global user.name "jamiehaywood"
+        git remote set-url origin https://${GHPagesToken}@github.com/jamiehaywood/HeartsPointsTracker.git
+        npm run deploy
