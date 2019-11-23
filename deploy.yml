@@ -1,0 +1,21 @@
+name: deploy
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js 10
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10
+
+    - name: NPM install
+      run: npm install
+      
+    - name: Deploy to GH pages
+      run: npm run deploy
