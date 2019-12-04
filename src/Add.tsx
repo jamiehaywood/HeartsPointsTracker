@@ -9,8 +9,12 @@ interface AddProps {
 export const Add: React.FC<AddProps> = (props) => {
     function addPlayer() {
         var playerName = prompt('Please enter your name:', '')!
-        if (playerName == null) { return }
-        props.addPlayer(([...props.currentPlayers, <Player name={playerName} />]))
+        if (playerName) {
+            props.addPlayer(([...props.currentPlayers, <Player name={playerName} />]))
+        }
+        else {
+            return
+        }
     }
 
     return (
