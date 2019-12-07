@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { squid } from '../images'
 import '../css/player.css'
 
@@ -12,7 +12,9 @@ const PlayerIcon = () => {
                 setImage(file)
             }} />
             {image
-                ? <img className="uploaded" src={URL.createObjectURL(image)} onClick={() => document.getElementById("myfile")!.click()} />
+            // eslint-disable-next-line
+            ? <img className="uploaded" src={URL.createObjectURL(image)} onClick={() => document.getElementById("myfile")!.click()} />
+            // eslint-disable-next-line
                 : <img src={squid} onClick={() => document.getElementById(key)!.click()} />}
 
         </div>
