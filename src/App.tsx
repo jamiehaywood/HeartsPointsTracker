@@ -19,7 +19,7 @@ export const App = () => {
   useEffect(() => { console.log(players) })
   const [players, addPlayers] = useState([])
   return (
-    <div>
+    <div style={{height:"100vh"}}>
       <Players list={players} />
       <Add currentPlayers={players} addPlayer={addPlayers} />
       <NavBar />
