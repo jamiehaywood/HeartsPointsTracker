@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import GlobalStore from './store'
+
+export default createContext(GlobalStore)
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
