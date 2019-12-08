@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import GlobalStore from './index'
+import { Player } from './Player/Player'
+import { observer } from 'mobx-react'
 
 
-interface Players {
-    list: JSX.Element[]
-}
-export const Players: React.FC<Players> = (props) => {
+export const Players: React.FC = observer(() => {
+    const store = useContext(GlobalStore).Players
     return (
         <div>
-            {props.list.map((players) => players)}
+            {store.players.map((players, i) =>
+                <Player
+                    name={players.name}
+                    points={players.points}
+                    setPoints={players.addPoints}
+                    key={i}
+                />
+            )}
         </div>
     )
-}
+})
