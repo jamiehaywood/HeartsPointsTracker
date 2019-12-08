@@ -8,12 +8,13 @@ export const Players: React.FC = observer(() => {
     const store = useContext(GlobalStore).Players
     return (
         <div>
-            {store.players.map((players, i) =>
+            {store.players.map((player, i) =>
                 <Player
-                    name={players.name}
-                    points={players.points}
-                    setPoints={players.addPoints}
+                    name={player.name}
+                    points={player.points}
+                    setPoints={player.addPoints}
                     key={i}
+                    setImage={player.changeImage}
                 />
             )}
         </div>
