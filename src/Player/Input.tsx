@@ -13,9 +13,8 @@ const Input: React.FC<props> = (props) => {
     }
 
     const addPoints = () => {
-        let inputPoints = (document.getElementById(props.name) as HTMLInputElement).value
-        let added = (props.points + parseInt(inputPoints))
-        props.setPoints(added);
+        let inputPoints = parseInt((document.getElementById(props.name) as HTMLInputElement).value)
+        props.setPoints(inputPoints);
     }
 
     useEffect(() => {
@@ -26,26 +25,25 @@ const Input: React.FC<props> = (props) => {
     const [arePointsSet, pointsAreSet] = useState(false)
 
     return (
-        <input className="input" type="tel" id={props.name}
-            onFocus={(e) => { (document.getElementById(props.name) as HTMLInputElement).value = '' }}
-            onKeyPress={
-                (e) => {
-                    if (e.key === 'Enter') {
-                        pointsAreSet(true);
-                        addPoints()
-                        e.preventDefault()
+            <input className="input" type="tel" id={props.name}
+                onFocus={(e) => { (document.getElementById(props.name) as HTMLInputElement).value = '' }}
+                onKeyPress={
+                    (e) => {
+                        if (e.key === 'Enter') {
+                            pointsAreSet(true);
+                            addPoints()
+                            e.preventDefault()
+                        }
+                    }}
+                onBlur={(e: any) => {
+                    if (!arePointsSet) {
+                        addPoints();
+                        pointsAreSet(false)
                     }
-
-                }}
-            onBlur={(e: any) => {
-                if (!arePointsSet) {
-                    addPoints();
-                    pointsAreSet(false)
+                    displayPoints()
                 }
-                displayPoints()
-            }
-            }
-        />
+                }
+            />
     )
 }
 export default Input
