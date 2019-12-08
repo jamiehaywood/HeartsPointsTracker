@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './css/App.css';
 
 import { Players } from './Players';
@@ -16,12 +16,12 @@ export interface PlayersContextInterface {
 
 
 export const App = () => {
-  useEffect(() => { console.log(players) })
-  const [players, addPlayers] = useState([])
   return (
-    <div style={{height:"100vh"}}>
-      <Players list={players} />
-      <Add currentPlayers={players} addPlayer={addPlayers} />
+    <div>
+      <div style={{paddingBottom:"8vh", overflow: "scroll" }}>
+        <Players />
+        <Add />
+      </div>
       <NavBar />
     </div>
   )
