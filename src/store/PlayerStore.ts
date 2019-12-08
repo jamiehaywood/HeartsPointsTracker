@@ -14,12 +14,13 @@ export class Player {
         this.points += points;
     }
 
-    changeImage() {
-
+    changeImage(e: any) {
+        let file = e.target.files![0]
+        this.image = file
     }
 }
 decorate(Player, {
-    changeImage: action,
+    changeImage: action.bound,
     addPoints: action.bound,
     name: observable,
     points: observable,
