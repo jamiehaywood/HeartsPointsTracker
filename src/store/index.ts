@@ -1,9 +1,12 @@
 import PlayerStore from './PlayerStore'
+import { GameStore } from './GameStore'
 
 class GlobalStore {
-    Players: PlayerStore
+    Players: PlayerStore;
+    GameStore: GameStore;
     constructor() {
         this.Players = new PlayerStore()
+        this.GameStore = new GameStore()
     }
 }
 
