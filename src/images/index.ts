@@ -1,2 +1,4 @@
 const squid = require('./squid.svg') as string;
-export { squid }
+const saveIcon = require('./save.svg') as string;
+const sound = require('./sound.svg') as string;
+export { squid, saveIcon, sound }
