@@ -6,12 +6,18 @@ export class Player {
     }
 
     name: string;
-    points = 0
-    gamesPlayed: number = 0
-    image: File | undefined
+    points = 0;
+    gamesPlayed: number = 0;
+    image: File | undefined;
+    pointsHistory: Array<number> = []
 
     addPoints(points: number) {
+        this.addToHistory(points)
         this.points += points;
+    }
+
+    addToHistory(points: number) {
+        this.pointsHistory.push(points)
     }
 
     changeImage(e: any) {
