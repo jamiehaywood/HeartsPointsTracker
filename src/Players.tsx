@@ -15,6 +15,7 @@ export const Players: React.FC = observer(() => {
                     setPoints={player.addPoints}
                     key={i}
                     setImage={player.changeImage}
+                    image={player.image}
                 />
             )}
         </div>
