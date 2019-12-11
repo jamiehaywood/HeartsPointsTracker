@@ -5,8 +5,8 @@ import '../css/player.css'
 interface props {
     image?: File | undefined
     setImage: Function
+    name: string
 }
-let key = Math.random().toString()
 
 const PlayerIcon: React.FC<props> = (props) => {
     return (
@@ -17,14 +17,14 @@ const PlayerIcon: React.FC<props> = (props) => {
                 onChange={(e: any) => {
                     props.setImage(e)
                 }}
-                id={key}
+                id={`${props.name}icon`}
             />
 
             {props.image
                 // eslint-disable-next-line
-                ? <img className="uploaded" src={URL.createObjectURL(props.image)} onClick={() => document.getElementById("myfile")!.click()} />
+                ? <img className="uploaded" src={URL.createObjectURL(props.image)} onClick={() => document.getElementById(`${props.name}icon`)!.click()} />
                 // eslint-disable-next-line
-                : <img src={squid} onClick={() => document.getElementById(key)!.click()} />}
+                : <img src={squid} onClick={() => document.getElementById(`${props.name}icon`)!.click()} />}
 
         </div>
     )

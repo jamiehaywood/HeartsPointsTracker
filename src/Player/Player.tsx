@@ -16,7 +16,7 @@ export const Player: React.FC<PlayerProps> = (props) => {
 
     return (
         <div className="playercontainer">
-            <PlayerIcon setImage={props.setImage} image={props.image} />
+            <PlayerIcon setImage={props.setImage} image={props.image} name={props.name} />
             <Name name={props.name} />
             <Input points={props.points} setPoints={props.setPoints} name={props.name} />
         </div>
