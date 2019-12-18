@@ -8,7 +8,8 @@ export const Players: React.FC = observer(() => {
   return (
     <div>
       {store.players
-        .sort((a, b) => (a.points > b.points ? -1 : 1))
+        .slice()
+        .sort((a, b) => (a.points < b.points ? -1 : 1))
         .map((player, i) => (
           <Player
             name={player.name}
