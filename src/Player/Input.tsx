@@ -14,7 +14,9 @@ const Input: React.FC<props> = (props) => {
 
     const addPoints = () => {
         let inputPoints = parseInt((document.getElementById(props.name) as HTMLInputElement).value)
-        props.setPoints(inputPoints);
+        if (!isNaN(inputPoints)) {
+            props.setPoints(inputPoints)
+        }
     }
 
     useEffect(() => {
