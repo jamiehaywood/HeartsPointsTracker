@@ -60,5 +60,5 @@ export default class PlayerStore {
 
 decorate(PlayerStore, {
     players: observable,
-    addPlayer: action
+    addPlayer: action.bound
 })
