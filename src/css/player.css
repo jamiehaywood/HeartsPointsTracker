@@ -1,9 +1,9 @@
 .name{
     text-align: "center";
-    font-size: 5vw;
+    font-size: 8vmin;
     font-weight: bold;
     align-self: center;
-    margin-left: 8vw;
+    margin-left: 18vw;
 }
 
 textarea,
@@ -25,7 +25,7 @@ border-radius: 0;
 }
 
 input{
-    width: 16vw;
+    width: 30vw;
     -webkit-appearance: none;
     border-width: none;
     border-top-style: hidden;
@@ -46,8 +46,8 @@ textarea, input { outline: none; }
 }
 
 .image, .uploaded{
-    width: 10vh;
-    height: 10vh;
+    width: 15vh;
+    height: 15vh;
     align-self: center;
     margin-left: 1vw;
     border-radius: 50%;
