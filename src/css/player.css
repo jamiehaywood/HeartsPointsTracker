@@ -25,7 +25,7 @@ border-radius: 0;
 }
 
 input{
-    width: 30vw;
+    width: 12vmax;
     -webkit-appearance: none;
     border-width: none;
     border-top-style: hidden;
