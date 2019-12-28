@@ -10,7 +10,7 @@ interface props {
 
 const PlayerIcon: React.FC<props> = (props) => {
     return (
-        <div className="alignleft image">
+        <div style={{width:"13vmax"}}>
             <input
                 className="visually-hidden"
                 type="file"
