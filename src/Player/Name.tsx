@@ -7,7 +7,7 @@ interface props {
 
 const Name: React.FC<props> = (props) => {
     return (
-        <div className="name" onClick={() => { }}>
+        <div style={{ fontWeight: 600, fontSize: "5vmax" }}>
             {props.name}
         </div>
     )
