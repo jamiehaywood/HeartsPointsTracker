@@ -36,6 +36,9 @@ const Input: React.FC<props> = (props) => {
                         addPoints()
                         e.preventDefault()
                     }
+                    else {
+                        pointsAreSet(false)
+                    }
                 }}
             onBlur={(e: any) => {
                 if (!arePointsSet) {
