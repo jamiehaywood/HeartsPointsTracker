@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "639ffd293729990a2bcbdb47efc65490",
+    "revision": "bb8110ad9db87a644fbe2c7e9311216c",
     "url": "/HeartsPointsTracker/index.html"
   },
   {
-    "revision": "04267232c77f97d8e231",
+    "revision": "67c4a755fcdae85b4576",
     "url": "/HeartsPointsTracker/static/css/main.4898fa4c.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/HeartsPointsTracker/static/js/2.f4107803.chunk.js"
   },
   {
-    "revision": "04267232c77f97d8e231",
-    "url": "/HeartsPointsTracker/static/js/main.7fab3c8f.chunk.js"
+    "revision": "67c4a755fcdae85b4576",
+    "url": "/HeartsPointsTracker/static/js/main.9d332127.chunk.js"
   },
   {
     "revision": "5c70cfb60e183fd55a9d",
