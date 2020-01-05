@@ -1,19 +1,25 @@
 name: Build and Deployment
+
 on:
   push:
     branches:
-      - master
+      - 'source'
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@master
-
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
-        BUILD_SCRIPT: npm install && npm run build
+      uses: actions/checkout@v1
+      
+    - name: NPM install
+      run: npm install
+      
+    - name: Configure GIT
+      run: |
+        git config --global user.email "jamie.haywood@gmail.com"
+        git config --global user.name "jamiehaywood"
+        git remote set-url origin https://${{ secrets.ACCESS_TOKEN }}@github.com/jamiehaywood/HeartsPointsTracker
+    
+    - name: NPM Build & Deploy
+      run: npm run deploy
