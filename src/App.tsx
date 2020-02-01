@@ -1,9 +1,10 @@
 import React from "react";
 import "./css/App.css";
-
+import * as Colours from './constants/colourConst'
 import { Players } from "./Players";
-import { Add } from "./Add";
 import { NavBar } from "./NavBar";
+import { Plus } from "./images";
+import store from "./store";
 
 export interface PlayersContextInterface {
   name: string;
@@ -17,7 +18,7 @@ export const App = () => {
     <div>
       <div style={{ paddingBottom: "8vh", overflow: "scroll" }}>
         <Players />
-        <Add />
+        <Plus className="add" width={60} fill={Colours.iconColours} onClick={() => store.Players.addPlayer()} />
       </div>
       <NavBar />
     </div>
