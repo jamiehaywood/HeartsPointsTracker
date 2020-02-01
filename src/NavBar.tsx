@@ -1,21 +1,49 @@
 import React, { useContext } from 'react'
 import './css/navbar.css'
-import { saveIcon, sound, resume } from './images'
+import { Save, Resume, Sound } from './images'
 import GlobalStore from './index'
 import { observer } from 'mobx-react'
+import * as Colours from './constants/colourConst'
 
 export const NavBar = observer(() => {
   const store = useContext(GlobalStore)
+  const iconPresets = {
+    width: "8vmin",
+    fill: Colours.iconColours
+  }
+
   return (
-    <div className="navbar" onClick={() => { console.log("hi"); }}>
-      <div style={{ textAlign: 'center', padding: '0px 20px' }}>
-        <div style={{ fontSize: '25px', color: '#686868' }}><b>{store.GameStore.numberOfGames}</b></div>
-        <b style={{ fontSize: '12px', color: '#686868' }}>№ Games</b>
-      </div>
-      {store.Players.players.length > 0
-        ? <div style={{ margin: "auto" }}><img alt="hi" src={saveIcon} /></div>
-        : <div style={{ margin: "auto" }}><img alt="hi1" src={resume} /></div>}
-      <div style={{ padding: "0px 20px" }}><img alt="ho" src={sound} /></div>
-    </div>
+    <table className="navbar">
+      <tr style={{ width: "100%" }}>
+        <td style={{ fontSize: "4vh", color: Colours.navbarText, width: "25%", textAlign: "start" }}>
+          <NavIcon label="№ Games">
+            <div style={{ fontWeight: 'bold', fontSize: '8vmin' }}>{store.GameStore.numberOfGames}</div>
+          </NavIcon>
+        </td>
+        <td style={{ margin: 'auto', width: "50%", textAlign: 'center' }}>
+          {store.Players.players.length > 0
+            ? <NavIcon label="Save"><Save {...iconPresets} /></NavIcon>
+            : <NavIcon label="Resume"> <Resume {...iconPresets} /></NavIcon>}
+        </td>
+        <td style={{ width: "25%", textAlign: 'end' }}>
+          <NavIcon label="Sound"><Sound {...iconPresets} /></NavIcon>
+        </td>
+      </tr>
+    </table >
   )
 })
+
+interface props {
+  label?: string
+}
+
+const NavIcon: React.FC<props> = (props) => {
+  return (
+    <div style={{ display: 'inline-grid', padding:'0vmin 2vmin'}}>
+      <div style={{ margin: 'auto' }}>{props.children}</div>
+      <div style={{ color: Colours.navbarText, marginTop: '-5px', fontSize: "3.5vmin", textAlign: "center" }}>{props.label}</div>
+    </div>
+  )
+}
+
+export default NavIcon
