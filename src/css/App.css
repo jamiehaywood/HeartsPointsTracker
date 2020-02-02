@@ -1,10 +1,26 @@
-.appBody{
-    position:relative;
-    min-height:'100vh';
-    text-align:center
+.appBody {
+    position: relative;
+    min-height: '100vh';
+    text-align: center
 }
 
-html,
-body {
-position: fixed;
+html, body {
+    position: fixed;
+}
+
+.add {
+    display: block;
+    margin: auto;
+}
+
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -msbox-sizing: border-box;
+}
+body{
+   overflow-x: hidden;
+}
+img{
+   max-width:100%;
 }
