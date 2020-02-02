@@ -10,10 +10,15 @@ export class Player {
     gamesPlayed: number = 0;
     image: File | undefined;
     pointsHistory: Array<number> = []
+    pointsColour: string = "#000000"
 
     addPoints(points: number) {
         this.addToHistory(points)
         this.points += points;
+    }
+
+    changePointsColour() {
+
     }
 
     addToHistory(points: number) {

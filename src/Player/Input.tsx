@@ -5,6 +5,7 @@ interface props {
     name: string
     setPoints: Function
     points: number
+    pointsColour?: string
 }
 
 const Input: React.FC<props> = (props) => {
