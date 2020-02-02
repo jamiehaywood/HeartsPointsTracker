@@ -8,7 +8,7 @@ import * as Colours from './constants/colourConst'
 export const NavBar = observer(() => {
   const store = useContext(GlobalStore)
   const iconPresets = {
-    width: "8vmin",
+    width: "6vmin",
     fill: Colours.iconColours
   }
 
@@ -17,7 +17,7 @@ export const NavBar = observer(() => {
       <tr style={{ width: "100%" }}>
         <td style={{ fontSize: "4vh", color: Colours.navbarText, width: "25%", textAlign: "start" }}>
           <NavIcon label="№ Games">
-            <div style={{ fontWeight: 'bold', fontSize: '8vmin' }}>{store.GameStore.numberOfGames}</div>
+            <div style={{ fontWeight: 'bold', fontSize: iconPresets.width }}>{store.GameStore.numberOfGames}</div>
           </NavIcon>
         </td>
         <td style={{ margin: 'auto', width: "50%", textAlign: 'center' }}>

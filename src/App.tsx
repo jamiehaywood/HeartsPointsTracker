@@ -16,7 +16,7 @@ export interface PlayersContextInterface {
 export const App = () => {
   return (
     <div>
-      <div style={{ paddingBottom: "8vh", overflow: "scroll" }}>
+      <div style={{ paddingBottom: "10vmax", overflow: "scroll" }}>
         <Players />
         <Plus className="add" width={60} fill={Colours.iconColours} onClick={() => store.Players.addPlayer()} />
       </div>
