@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import '../css/player.css'
+import './player.scss'
 
 interface props {
     name: string
