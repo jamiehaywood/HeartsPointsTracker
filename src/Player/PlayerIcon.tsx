@@ -1,6 +1,6 @@
 import React from 'react'
-import { squid } from '../images'
-import '../css/player.css'
+import { Squid } from '../images'
+import './player.scss'
 
 interface props {
     image?: File | undefined
@@ -10,21 +10,18 @@ interface props {
 
 const PlayerIcon: React.FC<props> = (props) => {
     return (
-        <div style={{width:"13vmax"}}>
-            <input
-                className="visually-hidden"
-                type="file"
+        <div>
+            <input className="visually-hidden" id={`${props.name}icon`} type="file" accept="image/*"
                 onChange={(e: any) => {
                     props.setImage(e)
                 }}
-                id={`${props.name}icon`}
             />
 
             {props.image
                 // eslint-disable-next-line
                 ? <img className="uploaded" src={URL.createObjectURL(props.image)} onClick={() => document.getElementById(`${props.name}icon`)!.click()} />
                 // eslint-disable-next-line
-                : <img src={squid} onClick={() => document.getElementById(`${props.name}icon`)!.click()} />}
+                : <Squid width="10vmax" onClick={() => { document.getElementById(`${props.name}icon`)!.click() }} />}
 
         </div>
     )
