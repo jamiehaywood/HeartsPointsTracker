@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/HeartsPointsTracker/precache-manifest.e1c47f759dcb8ed3eed21ddc7da29a41.js"
+  "/HeartsPointsTracker/precache-manifest.303e1d3b0f89cbf7f77730bd8acb0b2a.js"
 );
 
 self.addEventListener('message', (event) => {
