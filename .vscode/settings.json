@@ -1,0 +1,15 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "explorer.compactFolders": false,
+  "editor.formatOnSave": true,
+  "eslint.workingDirectories": [
+    "apps/pwa",
+    "apps/portal",
+    "packages/ui",
+    "packages/utils",
+    "."
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
