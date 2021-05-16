@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start:dev": "ts-node-dev --transpile-only src"
+    "start:dev": "ts-node-dev --transpile-only -r dotenv/config src"
   },
   "dependencies": {
     "@types/cors": "^2.8.10",
