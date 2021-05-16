@@ -4,6 +4,8 @@ module.exports = {
     'plugin:jest-formatting/recommended',
     'plugin:prettier/recommended',
     'plugin:react/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
   ],
   overrides: [
     {
@@ -33,6 +35,8 @@ module.exports = {
     'react/prop-types': 'off',
     'simple-import-sort/exports': 'error',
     'simple-import-sort/imports': 'error',
+    'import/no-cycle': ['error', { maxDepth: '∞' }],
+
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
   },
