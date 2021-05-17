@@ -1,0 +1,13 @@
+{
+  "it() declaration": {
+    "prefix": "describe",
+    "description": "Creates Jest describe() & it() statements",
+    "body": [
+      "describe('$1', () => {",
+      "  test('$2', () => {",
+      "",
+      "  });",
+      "});"
+    ]
+  }
+}
