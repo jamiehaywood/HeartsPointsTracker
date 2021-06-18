@@ -34,6 +34,7 @@
     ]
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start:fe": "cd frontend && yarn start"
   }
 }

@@ -22,6 +22,7 @@ module.exports = {
     },
   },
   preset: 'ts-jest',
+  roots: ['src'],
   testEnvironment: 'node',
   testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
   testTimeout: 10000,
