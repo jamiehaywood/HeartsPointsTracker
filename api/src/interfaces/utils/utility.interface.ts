@@ -5,3 +5,8 @@ export type DeepPartial<T> = {
     ? Readonly<DeepPartial<U>>[]
     : DeepPartial<T[P]>;
 };
+
+export type AtLeast<T, K extends keyof T> = Partial<T> & Pick<T, K>;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type AnyObject = Record<string, any>;
